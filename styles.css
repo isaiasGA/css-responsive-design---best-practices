@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+/*===================================
+          Typography
+=====================================
+*/
+
+h1 {
+  color: #143774;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 3.375rem;
+  margin: 0;
+
+}
+
+p {
+  color: #1792d2;
+  font-weight: 700;
+  font-size: .75rem;
+  margin: 0;
+}
+
+
+/*===================================
+          Layout
+=====================================
+*/
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  /*margin 0 auto is done in order to center content instead of using flexbox*/
+  margin: 0 auto;
+  outline: 1px solid magenta;
+}
+
+/*we created this modifier class ".container-nav" next to 'container' because we may need to use our container and its properties (max-width, margin)in other places of our code. So its best to add display flex to .container-nav instead  */
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+header {
+ background: #f8f8f8;
+ padding: 2em 0;
+}
+
+/*Navigation*/
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+  /*Margin left will help us prevent colliding nearby elements with our navigation list when re-sizing our viewport*/
+  margin-left: 2em;
+}
+
+nav a {
+  text-decoration: none ;
+  color: #707070;
+  font-weight: 700;
+  padding: .25em 0;
+  cursor: pointer;
+}
+
+/*focus pseudo class is used to emphasize a style when hovering over an element*/
+nav a:hover,
+nav a:focus {
+  color:  #1792d2;
+}
+
+.current {
+  border-bottom: 1px solid #707070;
+}
+
+.current:hover {
+  color: #707070;
+}
+
+
+/*===============
+
+Media Queries
+
+=================
+*/
+
+@media(max-width: 916px) {
+  
+  .container-nav {
+    flex-direction: column;
+/*     padding: 4em 0; */
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    
+   
+  }
+  
+  nav li {
+   margin: .8em 0;
+  }
+}
