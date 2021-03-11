@@ -1,7 +1,8 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>CSS: Responsive Design & Best Practices</title>
 </head>
@@ -10,10 +11,11 @@
   <!-- Using <main> tag is very important when setting up out main content because it will let disable people see the content better. Using <header> tag should also be a priority. -->
   
   <header>
-    <div class="container container-nav">
+      <!-- We are setting a second class 'container-flex' next to container because  we might not want all of the content within 'container' to have a display FLEX behavior -->
+    <div class="container container-flex">
       <div class="site-title">
-      <h1 class="title">Living the simple life</h1>
-      <p class="desc">A BLOG EXPLORING MINIMALISM IN LIFE<p/>
+      <h1>Living the simple life</h1>
+      <p class="subtitle">A BLOG EXPLORING MINIMALISM IN LIFE<p/>
     </div>
     <nav>
     <ul>
@@ -24,82 +26,82 @@
   </nav>
     </div>
   </header>
-  <div class="container">
+  <div class="container container-flex">
     <main role='main'>
       
 <!--       We setup our mark up in this order different from out layout because in case that our CSS breaks, we will end up having a nice layout to be displayed on our screen 
  * We are going to use CSS to change the order of the syles eventually in order to match our orginial layout.
 -->
       <article class='article-featured'>
-        <h2 class="article-title"></h2>
-        <img src="" alt="" class="article-image">
-        <p class='article-info'></p>
-        <p class='article-body'></p>
-        <a href="" class='article-read-more'></a>
+        <h2 class="article-title">Finding simplicity in life</h2>
+        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="plant on a desk" class="article-image">
+        <p class='article-info'>July 23, 2019 | 3 comments</p>
+        <p class='article-body'> <strong>Life Life can get complicated really quickly</strong>, but it doesn't have to be! There are many ways to simplify your life,   <a href="#">a few of which we've explored in the past</a>. This week we're taking a bit of a approach though, in how you can find simplicity in the life you already living. </p>
+        <a href="#" class='article-read-more'>continue reading</a>
       </article>
       
        <article class='article-recent'>
          <div class="article-recent-main">
-           <h2 class="article-title"></h2>
-           <p class='article-body'></p>
-           <a href="" class='article-read-more'></a>
+           <h2 class="article-title">Keeping cooking simple</h2>
+           <p class='article-body'>Food is a very important part of everyone's life. If you want to be healthy, you have to eat healthy. One of the easiest ways to do that is to keep your cooking nice and simple.</p>
+           <a href="" class='article-read-more'>continue reading</a>
          </div>
          <div class="article-recent-secondary">
-           <img src="" alt="" class="article-image">
-           <p class='article-info'></p>
+           <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="white dimsun" class="article-image">
+           <p class='article-info'>July 19, 2019 | 3 comments</p>
          </div>
        </article>
       
        <article class='article-recent'>
          <div class="article-recent-main">
-           <h2 class="article-title"></h2>
-           <p class='article-body'></p>
-           <a href="" class='article-read-more'></a>
+           <h2 class="article-title">Simplicity and work</h2>
+           <p class='article-body'>Work is often a major source of stress. People get frustrated, it ruins their relationship with others and it leads to burnout. By keeping your work life as simple as possible, it will help balance everything out.</p>
+           <a href="" class='article-read-more'>continue reading</a>
          </div>
          <div class="article-recent-secondary">
-           <img src="" alt="" class="article-image">
-           <p class='article-info'></p>
+           <img src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80" alt="white wooden table near brown chair" class="article-image">
+           <p class='article-info'>July 12, 2019 | 3 comments</p>
          </div>
        </article>
 
       <article class='article-recent'>
          <div class="article-recent-main">
-           <h2 class="article-title"></h2>
-           <p class='article-body'></p>
-           <a href="" class='article-read-more'></a>
+           <h2 class="article-title">Simple decorations</h2>
+           <p class='article-body'>A home isn't a home until you've decorated a little. People either don't decorate, or they go overboard and it doesn't have the impact they were hoping for. Staying simple will help draw the eye where you want it to and make things pop like never before.</p>
+           <a href="" class='article-read-more'>continue reading</a>
          </div>
          <div class="article-recent-secondary">
-           <img src="" alt="" class="article-image">
+           <img src="https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" alt=" green leafed plant in clear vase" class="article-image">
            <p class='article-info'></p>
          </div>
        </article>
     </main>
     
-    <side class='sidebar'>
+    <aside class='sidebar'>
       
       <div class="sidebar-widget">
-        <h2 class="widget-title"></h2>
-        <img src="" alt="" class='widget-image'>
-        <p class="widget-body"></p>
+        <h2 class="widget-title">About me</h2>
+        <img src="https://images.unsplash.com/photo-1548213238-0da7521bd6e0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=664&q=80" alt="mr mike" class='widget-image'>
+        <p class="widget-body">I find life better, and I'm happier, when things are nice and simple.</p>
       </div>
       
       <div class="sidebar-widget">
-        <h2 class="widget-title"></h2>
+        <h2 class="widget-title">Recent Posts</h2>
         <div class="widget-recent-post">
-          <h3 class="widget-recent-post-title"></h3>
-          <img src="" alt="" class="widget-image">
+          <h3 class="widget-recent-post-title">Keeping cooking simple</h3>
+          <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Three white dimsung" class="widget-image">
         </div>
         <div class="widget-recent-post">
-          <h3 class="widget-recent-post-title"></h3>
-          <img src="" alt="" class="widget-image">
+          <h3 class="widget-recent-post-title">Simplicity and work</h3>
+          <img src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="white table and white chair" class="widget-image">
         </div>
         <div class="widget-recent-post">
-          <h3 class="widget-recent-post-title"></h3>
-          <img src="" alt="" class="widget-image">
+          <h3 class="widget-recent-post-title">Simple decorations</h3>
+          <img src="https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1335&q=80" alt="green leafed plant in glass vase" class="widget-image">
         </div>
       </div>
       
-    </side>
+    </aside>
     
   </div>
   

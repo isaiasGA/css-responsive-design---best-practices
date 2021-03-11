@@ -1,31 +1,88 @@
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+/*Default IMG code rule set*/
+img {
+  max-width: 100%;
+  /*We set up display block to avoid the space underneat the image when leaving the default display inline which can prevent us from lineing up the image the way we want it.*/
+  display: block;
 }
 
 
 /*===================================
           Typography
+          * Typography is the best place to start when starting styling using CSS
 =====================================
 */
 
-h1 {
+
+h1, h2, h3 {
   color: #143774;
   font-family: 'Lora', serif;
   font-weight: 400;
-  font-size: 3.375rem;
+}
+
+h1 {
+  font-size: 2rem;
   margin: 0;
 
 }
 
-p {
+a {
+  color: #1792D2;
+}
+
+a:hover,
+a:focus {
+  color: #143774;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/*h1 Subtitle*/
+.subtitle {
   color: #1792d2;
   font-weight: 700;
   font-size: .75rem;
   margin: 0;
 }
 
+.article-title {
+  font-size: 1.5rem;
+}
 
+.article-read-more, .article-info {
+font-size: 0.875rem;
+}
+
+.article-info {
+  margin: 2em 0;
+}
+
+.article-read-more {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+  color: #143774;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.widget-title {
+  text-transform: uppercase;
+}
+
+ 
 /*===================================
           Layout
 =====================================
@@ -40,16 +97,20 @@ p {
 }
 
 /*we created this modifier class ".container-nav" next to 'container' because we may need to use our container and its properties (max-width, margin)in other places of our code. So its best to add display flex to .container-nav instead  */
-.container-nav {
+.container-flex {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
  
 }
 
 header {
  background: #f8f8f8;
+ text-align: center;
  padding: 2em 0;
 }
+
+
 
 /*Navigation*/
 
@@ -87,6 +148,14 @@ nav a:focus {
   color: #707070;
 }
 
+/*Articles*/
+
+.article-featured {
+  border-bottom: 1px solid #707070;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
 
 /*===============
 
@@ -96,16 +165,6 @@ Media Queries
 */
 
 @media(max-width: 916px) {
-  
-  .container-nav {
-    flex-direction: column;
-/*     padding: 4em 0; */
-  }
-  
-  header {
-    text-align: center;
-  }
-  
   h1 {
     font-size: 2rem;
   }
@@ -118,5 +177,19 @@ Media Queries
   
   nav li {
    margin: .8em 0;
+  }
+}
+
+@media (min-width: 916px) {
+  .container-flex {
+    flex-direction: row;
+  }
+
+  main {
+    width: 75%
+  }
+
+  aside {
+    width: 20%;
   }
 }
