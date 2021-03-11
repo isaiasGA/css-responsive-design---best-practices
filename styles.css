@@ -24,15 +24,17 @@ h1, h2, h3 {
   color: #143774;
   font-family: 'Lora', serif;
   font-weight: 400;
+  margin-top: 0;
 }
 
 h1 {
   font-size: 2rem;
-  margin: 0;
+   margin: 0;
 
 }
 
 a {
+  font: normal normal bold 16px/18px Ubuntu;
   color: #1792D2;
 }
 
@@ -78,9 +80,15 @@ font-size: 0.875rem;
   text-transform: uppercase;
 }
 
-.widget-title {
-  text-transform: uppercase;
+.widget-title, .widget-recent-post-title {
+  font-size: 1rem;
 }
+
+.widget-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+
 
  
 /*===================================
@@ -93,7 +101,6 @@ font-size: 0.875rem;
   max-width: 900px;
   /*margin 0 auto is done in order to center content instead of using flexbox*/
   margin: 0 auto;
-  outline: 1px solid magenta;
 }
 
 /*we created this modifier class ".container-nav" next to 'container' because we may need to use our container and its properties (max-width, margin)in other places of our code. So its best to add display flex to .container-nav instead  */
@@ -108,6 +115,14 @@ header {
  background: #f8f8f8;
  text-align: center;
  padding: 2em 0;
+ margin-bottom: 3em;
+}
+
+footer {
+  background: #143774;
+  color: white;
+  text-align: center;
+  padding: 3em 0;
 }
 
 
@@ -156,6 +171,50 @@ nav a:focus {
   margin-bottom: 2em;
 }
 
+.article-recent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+/*Change the order of the children using CSS: Image on top of text*/
+
+.article-recent-main {
+  order: 2;
+}
+
+.article-recent-secondary {
+  order: 1;
+}
+
+
+/*Widgets*/
+
+.sidebar-widget {
+  border: 20px solid #EBEBEB;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.widget-recent-post {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #707070;
+  margin-bottom: 1em;
+}
+
+.widget-recent-post:last-child {
+ border: 0;
+ margin-bottom: 0;
+}
+
+.widget-image {
+  order: -1;
+  margin-bottom: 1em;
+}
+
+
+
 
 /*===============
 
@@ -181,8 +240,13 @@ Media Queries
 }
 
 @media (min-width: 916px) {
+
+
+  /*Layout*/
+
   .container-flex {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   main {
@@ -191,5 +255,42 @@ Media Queries
 
   aside {
     width: 20%;
+    min-width: 200px;
+    margin-left: 1em;
   }
+
+  /*Articles*/
+
+  
+  .article-featured {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-image {
+    width: 100%;
+    min-height: 250px;
+    /*Object fit property will adjust an image or element to fit a desired space*/
+    object-fit: cover;
+    order: -2;
+  }
+
+  .article-info {
+    order: -1;
+  }
+
+  .article-recent {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .article-recent-main {
+      width: 68%;
+  }
+
+  .article-recent-secondary {
+    width: 30%;
+  }
+
+  
 }

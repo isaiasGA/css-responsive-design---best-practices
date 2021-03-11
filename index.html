@@ -3,6 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>CSS: Responsive Design & Best Practices</title>
 </head>
@@ -29,8 +30,7 @@
   <div class="container container-flex">
     <main role='main'>
       
-<!--       We setup our mark up in this order different from out layout because in case that our CSS breaks, we will end up having a nice layout to be displayed on our screen 
- * We are going to use CSS to change the order of the syles eventually in order to match our orginial layout.
+<!--    We organize our content this way just in case our CSS isnt loading then we will be able to have our content displayed in a way that is readable and presenable
 -->
       <article class='article-featured'>
         <h2 class="article-title">Finding simplicity in life</h2>
@@ -80,13 +80,13 @@
     <aside class='sidebar'>
       
       <div class="sidebar-widget">
-        <h2 class="widget-title">About me</h2>
+        <h2 class="widget-title">ABOUT ME</h2>
         <img src="https://images.unsplash.com/photo-1548213238-0da7521bd6e0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=664&q=80" alt="mr mike" class='widget-image'>
         <p class="widget-body">I find life better, and I'm happier, when things are nice and simple.</p>
       </div>
       
       <div class="sidebar-widget">
-        <h2 class="widget-title">Recent Posts</h2>
+        <h2 class="widget-title">RECENT POSTS</h2>
         <div class="widget-recent-post">
           <h3 class="widget-recent-post-title">Keeping cooking simple</h3>
           <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Three white dimsung" class="widget-image">
@@ -106,8 +106,9 @@
   </div>
   
   <footer>
-    <p></p>
-    <p></p>
+    <p><strong>Living the Simple Life</strong></p>
+    <p>Copyright 2021</p>
   </footer>
+  
 </body>
 </html>
